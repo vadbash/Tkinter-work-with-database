@@ -10,23 +10,23 @@ Label(root, text = "Enter name: ").grid(row = 0, sticky = W)
 Label(root, text = "Enter password: ").grid(row = 1, sticky = W)
 Label(root, text = "Enter your city: ").grid(row = 2, sticky = W)
 
-Fname = Entry(root)
-Sname = Entry(root)
-x = Entry(root)
+name = Entry(root)
+password = Entry(root)
+city = Entry(root)
 
 
-Fname.grid(row = 0, column = 1)
-Sname.grid(row = 1, column = 1)
-x.grid(row = 2, column = 1)
+name.grid(row = 0, column = 1)
+password.grid(row = 1, column = 1)
+city.grid(row = 2, column = 1)
 def getInput():
 
-    a = Fname.get()
-    b = Sname.get()
-    c = x.get()
+    lastname = name.get()
+    lastpassword = password.get()
+    lastcity = city.get()
     root.destroy()
 
     global params
-    params = [a,b,c]
+    params = [lastname,lastpassword,lastcity]
 
 Button(root, text = "Зберегти",command = getInput).grid(row = 5, sticky = W)
 
